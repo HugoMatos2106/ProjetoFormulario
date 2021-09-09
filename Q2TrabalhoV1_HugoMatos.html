@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cadastro de Aluno</title>
+        <script>
+            /*
+        2. Crie um formulário, por exemplo, o cadastro de um aluno ou de uma empresa, que possua:
+        a. um input text
+            i. Crie uma função Javascript que apresenta a quantidade de caracteres digitados.
+        b. um input textarea
+            i. Para o campo textarea, exiba a quantidade de palavras existente (dica: use o split do JS) ao
+            sair do campo e não permita que o texto tenha mais do que 144 caracteres.
+        c. um select (combobox), um multi select, um rádio button e um checkbox.
+            i. Crie uma função Javascript que exibe todas opções marcadas e/ou selecionadas. Esta
+            atividade deve ser feita de duas formas: acionando um botão para visualizar todas as
+            opções selecionadas, por meio de um alert ou em uma tabela, e também ao clicar nas opções. */
+           
+         </script>
+    </head>
+    <body>
+        <h1>Formulário de Cadastro</h1><br>
+
+
+             
+        
+          <div></div> Nome Completo: <input type="text" name="nome" size="50"></input>&nbsp&nbsp&nbsp&nbsp
+            Email: <input type="email" placeholder="aluno@gmail.com" size="50"></div><br><br>
+          <div>Endereço: <input type="text" name="endereco"size="80"></input> &nbsp&nbsp&nbsp&nbsp
+          
+            Bairro: <input type="text"></div><br>
+           <div> Cidade: <input type="text"></div><br>
+
+           <div>CPF: <input type="text" maxlength="14" size="11" placeholder="xxx.xxx.xxx-xx"></input>
+
+
+             Telefone: <input type="tel" placeholder="(xx) - x xxxx-xxxx"> </div>&nbsp&nbsp&nbsp&nbsp
+        </div>
+          
+          <div>Data de Nascimento: <input type="date"></input></div>
+            
+            <p> Sexo:
+                 <input type='radio'  name='idd' value="Masculino" onchange="opcaoRadio(this.value)"> Masculino </input> 
+                 <input type="radio" name='idd' value="Feminino" onchange="opcaoRadio(this.value)">  Feminino </input>
+                </p>
+               
+
+            <div><i> Curso: </i></div>
+                <select name="curso" id="mySelect" class ='checkbox' onchange="opcaoSelecionada()" multiple>
+                    <option > -- escolha uma opção --</option>
+                    <option value="Administração" >Administração</option>
+                    <option value="Contabilidade" > Contabilidade</option>
+                    <option value="Ciência da Computação">Ciência da Computação</option>
+                    <option value="Direito">Direito</option>
+                    <option value="Enfermagem">Enfermagem</option>
+                    <option value="Medicina">Medicina</option>
+                </select>&nbsp&nbsp&nbsp&nbsp
+
+              <p>  Preferência de Turno: <input type="checkbox" class ='chek' value="Manhã" >Manhã</input>
+                <input type="checkbox" value="Tarde" class ='chek'  >Tarde</input>
+                <input type="checkbox" value="Noite" class ='chek'  >Noite</input> </p>
+
+                Período <select name="periodo" onchange="opcaoRadio(this.value)" > 
+                           
+                            <option value="2021.1">2021.1</option>
+                            <option value="2021.2">2021.2</option>
+                        </select>
+                     
+
+                <p>Queremos lhe ouvir!!!</p>
+                      
+                      <textarea id="palavra" cols="40" rows="6"  maxlength="144" placeholder="Deixe seu Comentário!!!" onblur="contarPalavras()"></textarea>
+                      
+                     <span>140 caracteres</span><br>
+                      <button type="button"  onclick="mostrarResultado()">Exibir Formulário</button>
+                      <script>
+
+                        // function opcaoSelecionada(){
+                        //     var x = document.getElementById('mySelect').value;
+                        //     alert('Opção selecionada: ' + x);
+                        // }
+                 
+                    //   function opcaoRadio(val){
+                                
+                    //              alert('Opção selecionada: ' + val);
+                    //      }
+                 
+                     
+                            
+                         function contarPalavras(){
+                             
+                             let palavra = document.getElementById('palavra').value
+                             const myArr = palavra.split(' ');
+                             let qtd = 0;
+                             for(var i=0 ; i < myArr.length ; i++){
+                                    qtd++;
+                             }
+                              console.log(qtd);
+                              alert("Você digitou " + qtd + ' palavras');
+                         }
+                         
+                     function guardar(){
+                         debugger
+                       
+             
+                        for(let a in checkbox.length) {
+                            checkbox.check();
+                        }        
+                        
+                      
+                     }
+             
+                     var val = document.getElementById("mySelect");
+                     var vale = document.getElementsByClassName("chek");
+                     var armazenaDados = [];
+                     var armazenaDados2 = [];
+             
+                     function mostrarResultado(){
+                         for(let i=0 ; i<val.selectedOptions.length ; i++){
+                             armazenaDados[i]=val.selectedOptions[i].value;
+                         }
+                         for(let i=0 ; i<3 ; i++){
+                             if(vale[i].checked){
+                                 armazenaDados2[i]= vale[i].value;
+                                 
+                             }
+                            }
+                         
+                         console.log(armazenaDados.toString());
+                         console.log(armazenaDados2);
+
+                     }
+                     </script>
+        
+        
+    </body>
+</html>   

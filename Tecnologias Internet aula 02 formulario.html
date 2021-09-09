@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <img src="Jullie..jpg" alt="imagem" width="800" height="1000" >
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+      <script>
+          function oi(){
+           console.log('Combate');
+          }
+          function hello(){
+          alert('Fortaleza Tri Campeão Cearense!!!!');
+        }
+        function tecladoAcionado(valorDoTexto){
+          console.log(valorDoTexto);
+         // alert('Tecla pressionada');
+        }
+        function opcaoSelecionada(){
+          alert('Opção selecionada!!!'); 
+        }
+
+
+      </script>
+    </head>
+        <body>
+            <div>
+               <form action='https://google.com/search' method="GET">
+                 <input type="hidden" name="Aluno_Matricula" value='556'/>
+                 <input type="hidden" name="Aluno_CPF" value='123456789'/> 
+                 Consulta: <input type="TEXT" name='q'  onfocus="oi()" onblur="hello()"/> <br>
+                 Senha:<input type='password' name="senha">  
+
+                 <p>Escolhas Suas Frutas Preferidas:</p>
+                 <input type="checkbox" name='opt1'> Melão </input><br>
+                 <input type="checkbox" name='opt2'> Goiaba </input><br>
+                 <input type="checkbox" name='opt3'> Banana </input><br>  
+
+                 <p>Seu Veículo é:</p>
+                 <input type='radio' name='op1' onchange="hello()"> Moto </input><br> 
+                 <input type="radio" name='op1'> Carro </input><br> 
+                 <input type="radio" name='op1'> Caminhão</input><br>
+
+                      Tipo de Pessoa: <br>
+                      <select name="Tipo_Pessoa" onchange="opcaoSelecionada()" > 
+                      <option value="">--Selecione uma opção --</option>
+                      <option value="F">Pessoa Física </option> 
+                      <option value="J">Pessoa Jurídica</option>
+
+                      </select>
+                      <p>Queremos lhe ouvir!!!</p>
+                      <textarea name="comentário" id="" cols="40" rows="10" onkeypress="tecladoAcionado(this.value)">Deixe seu comentário</textarea>
+
+                      <div>Charset:<input type="TEXT" name="ie" value="UTF-8"> </div><br>
+
+                      <button type="button" onclick="hello()">Clique aqui</button><br><br>
+
+                      <input type = "SUBMIT" value="Enviar Requisição" > 
+
+               </form>
+            </div>
+        </body>
+</html>

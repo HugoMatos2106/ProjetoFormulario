@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <meta  charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Calculadora</title>
+        <h2>Calculadora</h2>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .fundo{
+                background-image: linear-gradient(55deg, blue, white);
+                height: 100vh;
+                color: rgb(255, 255, 255)
+                font-family Arial, Helvetica, sans-serif;
+                text-align: center;
+
+                
+            }
+            .calculadora{
+                position: absolute;
+                background-color: rgb(0, 0, 0, 0.8);
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 15px;
+                padding: 15px;
+            }
+            .botao{
+                background-color: rgba(98, 139, 158, 0.945);
+                width: 50px;
+                height: 50px;
+                font-size: 15px;
+                cursor: pointer;
+                border: none;
+                color: #fff;
+                margin: 3px;
+            }
+            .botao:hover{
+                background-color:dimgray
+            } 
+            #resultado{
+                background-color: white;
+                width: 204px;
+                height: 25px;
+                margin: 2px;
+                font-size: 25px;
+                color: black;
+                text-align: right;
+                padding: 2px;
+            } 
+        </style>
+    </head>
+
+    <body>
+
+        Número 1 <input type="text" id="num">
+       <p>Número 2 <input type="text" id="num2"></p>
+       <p>Resultado <input type="text" id="resultado"></p> 
+                    
+            Operação
+            <select name="" id="">
+                <option value="" id="">-----</option>
+                <option value="soma" id="a">+</option>
+                <option value="subtração" id="b">-</option>
+                <option value="mulplicalçao" id="c">*</option>
+                <option value="divisão" id="d">/</option>
+            </select>
+
+     <div class="fundo">
+              
+         <div class="calculadora">
+            <h2>Calculadora</h2>
+            <p id="resultado"></p> 
+        
+            <table>
+                <tr>
+                    <td ><button class="botao" onclick="insert('N')">N</button></td>
+                    <td ><button class="botao" onclick="insert('/')">/</button></td>
+                    <td><button  class="botao" onclick="insert('*')">*</button></td>
+                    <td><button  class="botao" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td ><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button  class="botao" onclick="insert('8')">8</button></td>
+                    <td ><button class="botao" onclick="insert('9')">9</button></td>
+                    <td rowspan="2"><button class="botao" style="height: 102px";>+</button></td>
+                </tr>
+                <tr>
+                    <td ><button class="botao" onclick="insert('4')">4</button></td>
+                    <td ><button class="botao" onclick="insert('5')">5</button></td>
+                    <td ><button class="botao" onclick="insert('6')">6</button></td>
+                    
+                </tr>
+                <tr>
+                    <td ><button class="botao" onclick="insert('1')">1</button></td>
+                    <td ><button class="botao" onclick="insert('2')">2</button></td>
+                    <td ><button class="botao" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="botao" style="height: 102px;">Enter</button></td>
+                    
+                   
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 102px;" onclick="insert('0')">0</button></td>
+                    <td ><button class="botao" onclick="insert()">,</button ></td>
+                  
+                </tr>   
+               
+            </table>
+         </div>
+    </div>
+        <script>
+            var x = document.getElementById('nm');
+            var y = document.getElementById('um2');
+            var z = x +y;
+        </script>
+
+        <script>
+            function insert(num){
+                var numero = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML = numero + num;
+
+            function calcular(){
+                if(resultado){
+                    document.getElementById('resultado').innerHTML = eval(resultado); 
+                }
+                else{
+                    document.getElementById('resultado').innerHTML = 'Vazio';
+                }
+            }
+
+            }
+        </script>
+
+        
+          
+       
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+         <script>
+            /*3. Escreva um código JS que realize os seguintes passos:
+                    ▪ Guarde o valor da gasolina em uma variável global;
+                    ▪ Leia a distância percorrida e o consumo de um carro, guardando os valores em 
+                    variáveis globais;
+                    ▪ Se ambos os valores forem maiores do que zero, calcule o valor
+                    gasto com combustível em uma variável de bloco, exibindo esse valor em uma
+                    caixa de mensagem. */
+                    
+                    valorGasolina = 6.00;
+                    distanciaPercorrida = prompt('Distancia percorrida?');
+                    consumoVeiculo = prompt('Consumo veículo?');
+                    if(distanciaPercorrida && consumoVeiculo > 0){
+                        let valorGasto = (distanciaPercorrida / consumoVeiculo) * valorGasolina 
+                        alert('Valor gasto na viagem: ' + valorGasto + ' Reais') 
+                    } 
+         </script>
+    </head>
+</html>

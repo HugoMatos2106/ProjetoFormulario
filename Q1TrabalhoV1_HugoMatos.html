@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Calculadora</h1></title>
+        <script>
+            /*
+        1. Crie uma calculadora simples com dois números, via input text, e permita realizar as operações de
+        (+, -, * e /) ao pressionar o botão da respectiva operação.
+        a. Debug as operações no browser
+        b. Utilize o console.log para visualizar as informações no browser
+        c. Adicione à calculadora um select (combobox) que permita selecionar a operação desejada (+,
+        -, * e /), e após selecionar a opção a operação correspondente é realizada. */
+       
+        function soma(num1, num2){
+              let x = '' ;
+              x = parseInt(num1) + parseInt(num2);
+              return x;
+             }
+
+        function subt(num1, num2){
+               x = '' ;
+               x = num1 - num2;
+               return x;
+             }
+
+            function multiplicar(num1, num2){
+               x = '' ;
+               x = num1 * num2;
+               return x;
+             }
+
+             function divisao(num1, num2){
+               x = '' ;
+               x = num1 / num2;
+               return x;
+             }
+
+             function resultadoSo(){
+                debugger;
+               
+                numero1 = document.getElementById('nu1');
+                num1 = numero1.value;
+                numero2 = document.getElementById('nu2');
+                num2 = numero2.value;
+               
+                x = soma(num1, num2);
+                console.log(x, num1, num2);
+                alert('A soma é: '+ x);
+            }
+
+             function resultadoSu(){
+                debugger;
+               
+                numero1 = document.getElementById('nu1');
+                num1 = numero1.value;
+                numero2 = document.getElementById('nu2');
+                num2 = numero2.value;
+               
+                x = subt(num1, num2);
+                console.log(x, num1, num2);
+                alert('A subtração é: '+ x);
+            }
+
+            function resultadoM(){
+                debugger;
+               
+                numero1 = document.getElementById('nu1');
+                var num1 = numero1.value;
+                numero2 = document.getElementById('nu2');
+                var num2 = numero2.value;
+
+                x = multiplicar(num1, num2);
+                console.log(x, num1, num2);
+                alert('A multiplicação é: '+ x);
+                }
+
+                function resultadoD(){
+                debugger;
+               
+                numero1 = document.getElementById('nu1');
+                num1 = numero1.value;
+                numero2 = document.getElementById('nu2');
+                num2 = numero2.value;
+               
+                x = divisao(num1, num2);
+                console.log(x, num1, num2);
+                alert('A divisão é: '+ x);
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Calculadora</h2>
+           Primeiro número: <input type="text" id="nu1" name="num1" value=""/> <br>
+           Segundo número: <input type="text" id="nu2" name="num2" value=""/> <br><br>
+           
+           Escolha a operação: <br> 
+           <input type="radio" name="op1"  onclick="resultadoSo()"> soma </input><br>
+           <input type="radio" name="op1"  onclick="resultadoSu()">subtração</input><br>
+           <input type="radio" name="op1"  onclick="resultadoM()">multiplicação</input><br>
+           <input type="radio" name="op1"  onclick="resultadoD()">divisão</input><br>
+
+      
+    </body>
+</html>

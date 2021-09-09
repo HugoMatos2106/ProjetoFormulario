@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+         <script type="text/javascript" src="crud_aluno.js"></script>
+         <script type="text/javascript" src="JS-Q5(HugoMatos).js"></script>
+
+         
+         <script>
+
+            identificaMaiorElemento([1,5,4,2]);
+
+             function computarNota(){
+                // elementoNota = document.getElementById('nota');
+                // elementoNota = document.getElementsByName('nota');
+                myForm = document.forms[0];
+                elementoNota = myForm['notaAluno']
+                    if(elementoNota != undefined){
+                         nota = myForm['notaAluno'].value;
+                         //nota = elementoNota[0].value;
+                         mensagem = verificarAprovacao(nota);
+                         alert(mensagem);
+                 //console.log(mensagem, nota);
+                    }
+                    else{
+                        alert('Exception')
+                    }
+                
+             }
+                /*4. Escreva um código JS da função anterior, de verificar se o aluno foi
+                     aprovado e:
+                    ▪ Simule exemplos para as três condições (reprovado, aprovado e
+                     fazer VS)
+                    ▪ Use uma caixa de diálogo para ler a nota do aluno e verificar sua
+                     situação
+                    ▪ Modifique sua função para retornar o valor da função (dica: use o
+                     return “MENSAGEM” e exiba a mensagem retornada pela função    */
+              </script>    
+                
+        </head> 
+    <body>
+        E-education <br/>
+        <form action="my_form">
+          Informe sua nota: <input type="text" id ='notaAluno' name="notaAluno" value=""/>
+          <button type="button" onclick="computarNota()">Computar Nota</button>
+        </form>
+    </body>
+</html>

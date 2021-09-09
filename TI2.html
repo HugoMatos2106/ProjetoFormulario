@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function bemVindo(){
+                console.log('Bem-vindo!');
+            }
+            function helloWorld(){
+                alert('Olá mundo!')
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <form action="https://google.com/search" method="GET">
+                <input type="hidden" name="aluno_matricula" value="54875" />
+                <input type="hidden" name="aluno_cpf" value="12345678909" />
+                User: <br/><input type="TEXT" name="q" onfocus="bemVindo()" onblur="helloWorld()" /><br/><br/>
+                Tipo de pessoa: <br/>
+                <select name="tipo_pessoa" size=3 multiple>
+                    <option value="">-- Selecione uma opcao --</option>
+                    <option value="F">Física</option>
+                    <option value="J">Juridica</option>
+                </select><br/><br/>
+                Password:<br/><input type="password" name="senha" /><br/><br/>
+                Bens: <br/>
+                <input type="radio" name="bem" />Bicicleta<br/> 
+                <input type="radio" name="bem" />Carro<br/> 
+                <input type="radio" name="bem" />Moto<br/>
+                <input type="radio" name="bem" />Casa<br/><br/>
+
+                Comentário:<br/><textarea cols="40" rows="5" name="comentario">Conte-nos sua opinião!</textarea><br/><br/>
+
+                <button type="button" onclick="helloWorld()">Visualize seu brinde!</button><br/><br/>
+
+                Charset:<br/><input type="TEXT" name="ie" value="UTF-8" readonly /><br/><br/>
+
+                <input type="submit" value="Enviar Requisição"/>
+            </form>
+        </div>
+    </body>
+</html>
